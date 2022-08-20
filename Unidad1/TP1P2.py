@@ -1,5 +1,3 @@
-from logging import exception
-from msilib.schema import Error
 from algo1 import *
 
 
