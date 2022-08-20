@@ -71,7 +71,3 @@ def Difference(arr1, arr2):
     for i in range(0, len(difArr)):
         difArr[i] = int(diffStr[i])
     return difArr
-
-
-p = Difference([0, 1, 2], [1, 5])
-print(p)
