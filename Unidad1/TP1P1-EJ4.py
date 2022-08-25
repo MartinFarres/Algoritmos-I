@@ -18,8 +18,8 @@ matriz2 = cargaMatriz(2)
 
 if len(matriz1[0]) == len(matriz2[0]) and len(matriz1) == len(matriz2):
     matriz3 = Array(len(matriz1), Array(len(matriz1[0]), 0))
-    for i in range(0, len(matriz1[0])):
-        for j in range(0, len(matriz1)):
+    for i in range(0, len(matriz1)):
+        for j in range(0, len(matriz1[0])):
             matriz3[i][j] = matriz1[i][j] - matriz2[i][j]
             print(matriz3[i][j])
 else:

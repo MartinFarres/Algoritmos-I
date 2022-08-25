@@ -14,21 +14,20 @@ def cargaMatriz():
 
 
 def MTS(matr):
+    res = False
     if len(matr) == len(matr[0]):
         res = True
-        for i in range(0, len(matr[0])):
-            for j in range(0, len(matr)):
+        for i in range(0, len(matr)):
+            for j in range(0, len(matr[0])):
                 if i > j and matr[i][j] != 0:
                     res = False
-    else:
-        res = False
     return res
 
 
 def detMTS(matr):
     det = 1
-    for i in range(0, len(matr[0])):
-        for j in range(0, len(matr)):
+    for i in range(0, len(matr)):
+        for j in range(0, len(matr[0])):
             if i == j:
                 det = det * matr[i][j]
     return det
