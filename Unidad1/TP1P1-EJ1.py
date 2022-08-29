@@ -1,6 +1,6 @@
 from algo1 import *
 import myLib
-import math
+
 
 lenVector = myLib.valInt("Ingrese la dimension del vector: ")
 vector = Array(lenVector, 0)

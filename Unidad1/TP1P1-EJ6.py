@@ -1,5 +1,4 @@
 from algo1 import *
-import math
 
 
 def cargaVector(n):
