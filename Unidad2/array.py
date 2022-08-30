@@ -9,7 +9,7 @@ def search(Array, element):
 
 
 def insert(Array, element, position):
-    if position <= len(Array):
+    if position <= len(Array) - 1:
         for i in range(len(Array) - 1, position - 1, -1):
             if i == position:
                 Array[i] = element
