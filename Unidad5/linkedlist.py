@@ -144,6 +144,18 @@ def move(L, pos_origin, pos_dest):
             L.head = nodeToMove
 
 
+def revert(L):
+    newL = LinkedList()
+    len = length(L)
+    current = L.head
+
+    for i in range(len):
+        len -= 1
+        add(newL, current.value)
+        current = current.nextNode
+    return newL
+
+
 def recorrerLista(S):
     currentNode = S.head
     while currentNode != None:
@@ -153,6 +165,3 @@ def recorrerLista(S):
             print('|', currentNode.value, '|-> None')
         currentNode = currentNode.nextNode
     print('')
-
-
-
