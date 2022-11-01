@@ -183,7 +183,7 @@ def traverseInOrder(B):
 def traverseInOrderR(current, R):
     if current != None:
         traverseInOrderR(current.leftnode, R)
-        add(R, current.value)
+        add(R, current.key)
         traverseInOrderR(current.rightnode, R)
 
 
@@ -197,7 +197,7 @@ def traverseInPreorder(B):
 
 def traverseInPreorderR(current, R):
     if current != None:
-        add(R, current.value)
+        add(R, current.key)
         traverseInPreorderR(current.leftnode, R)
         traverseInPreorderR(current.rightnode, R)
 
@@ -214,7 +214,7 @@ def traverseInPostorderR(current, R):
     if current != None:
         traverseInPostorderR(current.leftnode, R)
         traverseInPostorderR(current.rightnode, R)
-        add(R, current.value)
+        add(R, current.key)
 
 
 def traverseBreadFirst(B):
@@ -223,7 +223,7 @@ def traverseBreadFirst(B):
     enqueue(queue, B.root)
     while queue.head != None:
         node = dequeue(queue)
-        enqueue(valuesQueue, node.value)
+        enqueue(valuesQueue, node.key)
 
         if node.leftnode != None:
             enqueue(queue, node.leftnode)
@@ -232,22 +232,22 @@ def traverseBreadFirst(B):
     return revert(valuesQueue)
 
 
-test = BynaryTree()
-insert(test, "10", 10)
-insert(test, "8", 8)
-insert(test, "9", 9)
-insert(test, "12", 12)
-insert(test, "11", 11)
-insert(test, "15", 15)
-insert(test, "25", 25)
-insert(test, "2", 2)
+# test = BynaryTree()
+# insert(test, "10", 10)
+# insert(test, "8", 8)
+# insert(test, "9", 9)
+# insert(test, "12", 12)
+# insert(test, "11", 11)
+# insert(test, "15", 15)
+# insert(test, "25", 25)
+# insert(test, "2", 2)
 
-inOrder = traverseInOrder(test)
-preOrder = traverseInPreorder(test)
-postOrder = traverseInPostorder(test)
-amplOrder = traverseBreadFirst(test)
+# inOrder = traverseInOrder(test)
+# preOrder = traverseInPreorder(test)
+# postOrder = traverseInPostorder(test)
+# amplOrder = traverseBreadFirst(test)
 
-recorrerLista(inOrder)
-recorrerLista(preOrder)
-recorrerLista(postOrder)
-recorrerLista(amplOrder)
+# recorrerLista(inOrder)
+# recorrerLista(preOrder)
+# recorrerLista(postOrder)
+# recorrerLista(amplOrder)
