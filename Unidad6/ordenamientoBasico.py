@@ -18,7 +18,7 @@ def selectionSort(R):
         # Encontrar el mínimo elemento en el resto de la lista desordenada
         minPos = i
         for j in range(i+1, length(R)):
-            if access(L, minPos) > access(R, j):
+            if access(R, minPos) > access(R, j):
                 minPos = j
         # Intercambiar el elemento
         move(R, minPos, i)
